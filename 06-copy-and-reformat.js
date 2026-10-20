@@ -9,8 +9,19 @@ primitives or other objects with the same limitations (ie. no arrays, sets, etc.
 
 
 function copyFormatted(obj) {
-    // implement here
-    return null;
+    let newData = {};
+    for (let key in obj){
+        if (typeof(obj[key]) == "string"){
+            newData[key] = obj[key].toLowerCase();
+        } else if (typeof(obj[key]) == "number"){
+            newData[key] = +obj[key].toFixed(2);
+        } else if (typeof(obj[key]) == "object"){
+            newData[key] = copyFormatted(obj[key]);
+        } else {
+            newData[key] = obj[key];
+        }
+    }
+    return newData;
 }
 
 const data = {
