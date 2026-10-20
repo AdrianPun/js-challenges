@@ -4,11 +4,11 @@ function processExamResults(score, bonusPoints) {
     let finalScore = score + bonusPoints;
     
     // Check for a perfect score
-    if (finalScore == "100") {
+    if (finalScore == 100) {
         console.log("Perfect score achieved!");
     }
     
     return "Student scored: " + finalScore;
 }
 
-console.log(processExamResults(80, "20"));
+console.log(processExamResults(80, 20));

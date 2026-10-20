@@ -8,7 +8,7 @@ function formatName(name) {
 }
 
 // Function expression assigned to a variable
-var capitalize = function(text) {
+function capitalize (text) {
     return text.charAt(0).toUpperCase() + text.slice(1);
 };
 

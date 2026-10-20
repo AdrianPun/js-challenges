@@ -3,11 +3,10 @@
 let highScores = [100, 90, 80];
 
 // A developer tries to use the array like a dictionary
-highScores["final"] = 70;
+highScores[3] = 70;
 
 let total = 0;
 for (let key in highScores) {
     total += highScores[key];
 }
-
 console.log("Average score: " + total / highScores.length);

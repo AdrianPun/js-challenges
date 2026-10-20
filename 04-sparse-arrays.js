@@ -8,8 +8,9 @@ dailyTemperatures[10] = 85;
 let sum = 0;
 // A traditional C-style for loop
 for (let i = 0; i < dailyTemperatures.length; i++) {
-    sum += dailyTemperatures[i];
+    if(dailyTemperatures[i]){
+        sum += dailyTemperatures[i];
+    }
 }
-
 console.log("Average temp: " + sum / dailyTemperatures.length);
 
